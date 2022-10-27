@@ -13,16 +13,10 @@ import java.util.ArrayList;
 @GRpcService
 public class GetAnimalsRegistrationNumbersHalf extends GetAnimalsRegistrationNumbersHalfGrpc.GetAnimalsRegistrationNumbersHalfImplBase
 {
+    // get database
     private HalfAnAnimalDAO dao = new HalfAnAnimalDAOImpl();
 
-    // get the id of half animal
     int id ;
-
-    // get the half an animal with the id
-    via.sdj3.grpcspringbootx.model.HalfAnAnimal halfAnAnimal = dao.getHalfAnAnimalById(id);
-
-    //get animalsParts from animal part
-    ArrayList<AnimalPart> animalParts = halfAnAnimal.getParts();
 
     ArrayList<Integer> ids = new ArrayList<>();
 
@@ -34,24 +28,39 @@ public class GetAnimalsRegistrationNumbersHalf extends GetAnimalsRegistrationNum
 
         System.out.println("Received request in GetAnimalsRegistrationNumbersHalf =>" + halfAnAnimalId.toString());
 
-       id = halfAnAnimalId.getId();
+
+        // get the id of half animal
+        id = halfAnAnimalId.getId();
+        System.out.println("Got the ID " + id);
+
+        // get the half an animal with the id
+        via.sdj3.grpcspringbootx.model.HalfAnAnimal halfAnAnimal = dao.getHalfAnAnimalById(id);
+        //get animalsParts from Half an Animal
+        ArrayList<AnimalPart> animalParts = halfAnAnimal.getParts();
 
 
 
 
+        // add all IDs into one list
         for (AnimalPart animalPart : animalParts){
+            //check if the id is already in lsit
             if(checkIfIdIsNotInList(animalPart.getAnimal().getId()))
             {
                 ids.add(animalPart.getAnimal().getId());
             }
         }
 
-        RegistrationNumbersForAnimal registrationNumbersForAnimal = RegistrationNumbersForAnimal.newBuilder().build();
+       // System.out.println("[" + ids.get(0) + ", " + ids.get(1)+ ", " + ids.get(2) + "]");
+        ArrayList<AnimalId> animalIds = new ArrayList<>();
 
-                //build().get
+        // add all IDs into the GRPc Object AnimalID
         for (int id : ids) {
-            registrationNumbersForAnimal.toBuilder().addIds(AnimalId.newBuilder().setId(id));
+            animalIds.add(AnimalId.newBuilder().setId(id).build());
         }
+
+        RegistrationNumbersForAnimal registrationNumbersForAnimal = RegistrationNumbersForAnimal.newBuilder().addAllIds(animalIds).build();
+
+
 
 
         halfAnAnimalStreamObserver.onNext(registrationNumbersForAnimal);
@@ -68,9 +77,11 @@ public class GetAnimalsRegistrationNumbersHalf extends GetAnimalsRegistrationNum
         for (int id: ids) {
             if(id == idToCheck)
             {
+                //System.out.println("id: " + idToCheck + " is in list" );
                 return false;
             }
         }
+        //System.out.println("id: " + idToCheck + " is not in list" );
         return true;
     }
 
