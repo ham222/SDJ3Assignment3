@@ -1,27 +1,24 @@
 package via.sdj3.grpcspringbootx.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class HalfAnAnimal
-{
-    
-    private Map<Integer, AnimalPart> parts;
+public class HalfAnAnimal {
+
     List<Tray> trays;
+    private ArrayList<AnimalPart> parts;
 
     public HalfAnAnimal() {
         trays = new ArrayList<>();
-        parts = new HashMap<>();
+        parts = new ArrayList<>();
     }
 
 
-    public Map<Integer, AnimalPart> getParts() {
+    public ArrayList<AnimalPart> getParts() {
         return parts;
     }
 
-    public void setParts(Map<Integer, AnimalPart> parts) {
+    public void setParts(ArrayList<AnimalPart> parts) {
         this.parts = parts;
     }
 

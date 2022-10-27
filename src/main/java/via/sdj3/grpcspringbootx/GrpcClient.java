@@ -2,29 +2,30 @@ package via.sdj3.grpcspringbootx;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import via.sdj3.handin3.GetAnimalsRegistrationNumbersPackageGrpc;
+import via.sdj3.handin3.PackageId;
+import via.sdj3.handin3.RegistrationNumbersForAnimal;
 
 import java.util.Scanner;
 
 public class GrpcClient {
     public static void main(String[] args) {
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",6565)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 6565)
                 .usePlaintext()
                 .build();
 
-        /*TextConverterGrpc.TextConverterBlockingStub stub =
-                TextConverterGrpc.newBlockingStub(channel);*/
+        GetAnimalsRegistrationNumbersPackageGrpc.GetAnimalsRegistrationNumbersPackageBlockingStub stub =
+                GetAnimalsRegistrationNumbersPackageGrpc.newBlockingStub(channel);
 
-        /*
-            User input
-         */
-
-        /*String text = "";
+        int text = 0;
         Scanner keyboard = new Scanner(System.in);
-        while (!text.equals("quit")){
-            text=keyboard.nextLine();
-            ResponseText responseText = stub.toUpper(RequestText.newBuilder().setInputText(text).build());
-            System.out.println(responseText);
-        }*/
+        while (!(text < 0)) {
+            text = keyboard.nextInt();
+            RegistrationNumbersForAnimal response =
+                    stub.get(PackageId.newBuilder().build());
+            System.out.println(response);
+        }
+
         channel.shutdown();
     }
 }

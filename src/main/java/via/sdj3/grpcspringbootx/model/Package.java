@@ -7,9 +7,9 @@ import java.util.Map;
 
 public class Package {
 
-    private String type;
-    private List<Tray> trays;
-    private Map<Integer, AnimalPart> parts;
+    private final String type;
+    private final List<Tray> trays;
+    private final Map<Integer, AnimalPart> parts;
 
     public Package(String type) {
         this.type = type;
@@ -24,8 +24,8 @@ public class Package {
     public List<Tray> getTrays() {
         return trays;
     }
-    
-    public int getPartsCount(){
+
+    public int getPartsCount() {
         return parts.size();
     }
 }

@@ -40,10 +40,25 @@ public final class Services {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_handin3_HalfAnAnimal_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_handin3_RegistrationNumbersForAnimal_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_handin3_RegistrationNumbersForAnimal_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_handin3_HalfAnAnimalId_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_handin3_HalfAnAnimalId_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_handin3_AnimalId_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_handin3_AnimalId_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_handin3_AnimalProducts_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_handin3_AnimalProducts_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -62,12 +77,20 @@ public final class Services {
       "parts\030\003 \003(\0132\023.handin3.AnimalPart\"W\n\014Half" +
       "AnAnimal\022#\n\002id\030\001 \001(\0132\027.handin3.HalfAnAni" +
       "malId\022\"\n\005parts\030\002 \003(\0132\023.handin3.AnimalPar" +
-      "t\"\034\n\016HalfAnAnimalId\022\n\n\002id\030\001 \001(\0052S\n$GetAn" +
-      "imalsRegistrationNumbersPackage\022+\n\003Get\022\022" +
-      ".handin3.PackageId\032\020.handin3.Package2Z\n!" +
-      "GetAnimalsRegistrationNumbersHalf\0225\n\003Get" +
-      "\022\027.handin3.HalfAnAnimalId\032\025.handin3.Half" +
-      "AnAnimalB\024\n\020via.sdj3.handin3P\001b\006proto3"
+      "t\">\n\034RegistrationNumbersForAnimal\022\036\n\003ids" +
+      "\030\001 \003(\0132\021.handin3.AnimalId\"\034\n\016HalfAnAnima" +
+      "lId\022\n\n\002id\030\001 \001(\005\"\026\n\010AnimalId\022\n\n\002id\030\001 \001(\005\"" +
+      "h\n\016AnimalProducts\022%\n\tpackageId\030\001 \003(\0132\022.h" +
+      "andin3.PackageId\022/\n\016halfAnAnimalId\030\002 \003(\013" +
+      "2\027.handin3.HalfAnAnimalId2h\n$GetAnimalsR" +
+      "egistrationNumbersPackage\022@\n\003Get\022\022.handi" +
+      "n3.PackageId\032%.handin3.RegistrationNumbe" +
+      "rsForAnimal2j\n!GetAnimalsRegistrationNum" +
+      "bersHalf\022E\n\003Get\022\027.handin3.HalfAnAnimalId" +
+      "\032%.handin3.RegistrationNumbersForAnimal2" +
+      "F\n\021GetAnimalProducts\0221\n\003Get\022\021.handin3.An" +
+      "imalId\032\027.handin3.AnimalProductsB\024\n\020via.s" +
+      "dj3.handin3P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -103,12 +126,30 @@ public final class Services {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_handin3_HalfAnAnimal_descriptor,
         new java.lang.String[] { "Id", "Parts", });
-    internal_static_handin3_HalfAnAnimalId_descriptor =
+    internal_static_handin3_RegistrationNumbersForAnimal_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_handin3_RegistrationNumbersForAnimal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_handin3_RegistrationNumbersForAnimal_descriptor,
+        new java.lang.String[] { "Ids", });
+    internal_static_handin3_HalfAnAnimalId_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_handin3_HalfAnAnimalId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_handin3_HalfAnAnimalId_descriptor,
         new java.lang.String[] { "Id", });
+    internal_static_handin3_AnimalId_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_handin3_AnimalId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_handin3_AnimalId_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_handin3_AnimalProducts_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_handin3_AnimalProducts_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_handin3_AnimalProducts_descriptor,
+        new java.lang.String[] { "PackageId", "HalfAnAnimalId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

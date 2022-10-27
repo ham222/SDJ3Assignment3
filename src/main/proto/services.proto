@@ -26,7 +26,7 @@ message Package{
 }
 
 service GetAnimalsRegistrationNumbersPackage{
-  rpc Get(PackageId) returns (Package);
+  rpc Get(PackageId) returns (RegistrationNumbersForAnimal);
 }
 
 message HalfAnAnimal{
@@ -34,10 +34,27 @@ message HalfAnAnimal{
   repeated AnimalPart parts =2;
 }
 
+message RegistrationNumbersForAnimal{
+  repeated AnimalId ids = 1;
+}
+
 message HalfAnAnimalId{
   int32 id =1;
 }
 
 service GetAnimalsRegistrationNumbersHalf{
-  rpc Get(HalfAnAnimalId) returns (HalfAnAnimal);
+  rpc Get(HalfAnAnimalId) returns (RegistrationNumbersForAnimal);
+}
+
+message AnimalId{
+  int32 id=1;
+}
+
+message AnimalProducts{
+  repeated PackageId packageId=1;
+  repeated HalfAnAnimalId halfAnAnimalId=2;
+}
+
+service GetAnimalProducts{
+  rpc Get(AnimalId) returns(AnimalProducts);
 }

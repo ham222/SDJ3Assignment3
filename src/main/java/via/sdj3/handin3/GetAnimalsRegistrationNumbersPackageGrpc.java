@@ -15,28 +15,28 @@ public final class GetAnimalsRegistrationNumbersPackageGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<via.sdj3.handin3.PackageId,
-      via.sdj3.handin3.Package> getGetMethod;
+      via.sdj3.handin3.RegistrationNumbersForAnimal> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
       requestType = via.sdj3.handin3.PackageId.class,
-      responseType = via.sdj3.handin3.Package.class,
+      responseType = via.sdj3.handin3.RegistrationNumbersForAnimal.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<via.sdj3.handin3.PackageId,
-      via.sdj3.handin3.Package> getGetMethod() {
-    io.grpc.MethodDescriptor<via.sdj3.handin3.PackageId, via.sdj3.handin3.Package> getGetMethod;
+      via.sdj3.handin3.RegistrationNumbersForAnimal> getGetMethod() {
+    io.grpc.MethodDescriptor<via.sdj3.handin3.PackageId, via.sdj3.handin3.RegistrationNumbersForAnimal> getGetMethod;
     if ((getGetMethod = GetAnimalsRegistrationNumbersPackageGrpc.getGetMethod) == null) {
       synchronized (GetAnimalsRegistrationNumbersPackageGrpc.class) {
         if ((getGetMethod = GetAnimalsRegistrationNumbersPackageGrpc.getGetMethod) == null) {
           GetAnimalsRegistrationNumbersPackageGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<via.sdj3.handin3.PackageId, via.sdj3.handin3.Package>newBuilder()
+              io.grpc.MethodDescriptor.<via.sdj3.handin3.PackageId, via.sdj3.handin3.RegistrationNumbersForAnimal>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   via.sdj3.handin3.PackageId.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sdj3.handin3.Package.getDefaultInstance()))
+                  via.sdj3.handin3.RegistrationNumbersForAnimal.getDefaultInstance()))
               .setSchemaDescriptor(new GetAnimalsRegistrationNumbersPackageMethodDescriptorSupplier("Get"))
               .build();
         }
@@ -96,7 +96,7 @@ public final class GetAnimalsRegistrationNumbersPackageGrpc {
     /**
      */
     public void get(via.sdj3.handin3.PackageId request,
-        io.grpc.stub.StreamObserver<via.sdj3.handin3.Package> responseObserver) {
+        io.grpc.stub.StreamObserver<via.sdj3.handin3.RegistrationNumbersForAnimal> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
@@ -107,7 +107,7 @@ public final class GetAnimalsRegistrationNumbersPackageGrpc {
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 via.sdj3.handin3.PackageId,
-                via.sdj3.handin3.Package>(
+                via.sdj3.handin3.RegistrationNumbersForAnimal>(
                   this, METHODID_GET)))
           .build();
     }
@@ -130,7 +130,7 @@ public final class GetAnimalsRegistrationNumbersPackageGrpc {
     /**
      */
     public void get(via.sdj3.handin3.PackageId request,
-        io.grpc.stub.StreamObserver<via.sdj3.handin3.Package> responseObserver) {
+        io.grpc.stub.StreamObserver<via.sdj3.handin3.RegistrationNumbersForAnimal> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -152,7 +152,7 @@ public final class GetAnimalsRegistrationNumbersPackageGrpc {
 
     /**
      */
-    public via.sdj3.handin3.Package get(via.sdj3.handin3.PackageId request) {
+    public via.sdj3.handin3.RegistrationNumbersForAnimal get(via.sdj3.handin3.PackageId request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -174,7 +174,7 @@ public final class GetAnimalsRegistrationNumbersPackageGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.sdj3.handin3.Package> get(
+    public com.google.common.util.concurrent.ListenableFuture<via.sdj3.handin3.RegistrationNumbersForAnimal> get(
         via.sdj3.handin3.PackageId request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
@@ -202,7 +202,7 @@ public final class GetAnimalsRegistrationNumbersPackageGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((via.sdj3.handin3.PackageId) request,
-              (io.grpc.stub.StreamObserver<via.sdj3.handin3.Package>) responseObserver);
+              (io.grpc.stub.StreamObserver<via.sdj3.handin3.RegistrationNumbersForAnimal>) responseObserver);
           break;
         default:
           throw new AssertionError();

@@ -2,9 +2,9 @@ package via.sdj3.grpcspringbootx.model;
 
 public class AnimalPart {
 
+    public String type;
     private int id;
     private double weight;
-    public String type;
     private Animal animal;
 
     public AnimalPart(int id, double weight, String type, Animal animal) {

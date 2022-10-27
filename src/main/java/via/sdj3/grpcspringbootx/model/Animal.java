@@ -15,38 +15,37 @@ public class Animal {
         this.origin = origin;
     }
 
-        public int getId() {
-            return id;
-        }
+    public int getId() {
+        return id;
+    }
 
-        public void setId(int id) {
-            this.id = id;
-        }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-        public double getWeight() {
-            return weight;
-        }
+    public double getWeight() {
+        return weight;
+    }
 
-        public void setWeight(double weight) {
-            this.weight = weight;
-        }
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 
-        public Date getDateDelivered() {
-            return dateDelivered;
-        }
+    public Date getDateDelivered() {
+        return dateDelivered;
+    }
 
-        public void setDateDelivered(Date dateDelivered) {
-            this.dateDelivered = dateDelivered;
-        }
+    public void setDateDelivered(Date dateDelivered) {
+        this.dateDelivered = dateDelivered;
+    }
 
-        public String getOrigin() {
-            return origin;
-        }
+    public String getOrigin() {
+        return origin;
+    }
 
-        public void setOrigin(String origin) {
-            this.origin = origin;
-        }
-
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
 
 
 }
