@@ -17,11 +17,11 @@ public class PackageDAOImpl implements PackageDAO {
         // ONLY FOR TESTING
         // TODO DELETE AFTER DONE TESTING
         Animal animal1 = new Animal(23,new Date(2022,5,15), "Horsens");
-        animal1.setId(1);
+        animal1.setId(4);
         Animal animal2 = new Animal(23,new Date(2022,5,16), "Horsens1");
-        animal2.setId(2);
+        animal2.setId(5);
         Animal animal3 = new Animal(23,new Date(2022,5,15), "Horsens2");
-        animal3.setId(3);
+        animal3.setId(6);
 
         AnimalPart part1 = new AnimalPart(1,2,"1", animal1);
         AnimalPart part2 = new AnimalPart(2,2,"1", animal1);
