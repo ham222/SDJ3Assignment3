@@ -8,15 +8,20 @@ import java.util.Map;
 public class Package {
 
     private final String type;
-    private final List<Tray> trays;
-    private final Map<Integer, AnimalPart> parts;
+    private List<Tray> trays;
+    private ArrayList<AnimalPart> parts;
 
     public Package(String type) {
         this.type = type;
         trays = new ArrayList<>();
-        parts = new HashMap<>();
+        parts = new ArrayList<>();
     }
-
+    public ArrayList<AnimalPart> getParts() {
+        return parts;
+    }
+    public void setParts(ArrayList<AnimalPart> parts) {
+        this.parts = parts;
+    }
     public String getType() {
         return type;
     }

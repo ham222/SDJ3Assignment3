@@ -1,7 +1,6 @@
 package via.sdj3.grpcspringbootx.database.SlaughterhouseInterfaces;
 
-import via.sdj3.handin3.Package;
-import via.sdj3.handin3.PackageId;
+import via.sdj3.grpcspringbootx.model.Package;
 
 public interface PackageDAO {
 
