@@ -7,6 +7,7 @@ public class HalfAnAnimal {
 
     List<Tray> trays;
     private ArrayList<AnimalPart> parts;
+    private int id;
 
     public HalfAnAnimal() {
         trays = new ArrayList<>();

@@ -3,35 +3,13 @@ option java_multiple_files = true;
 option java_package ="via.sdj3.handin3";
 package handin3;
 
-message Animal{
-  int32 id = 1;
-  double weight = 2;
-}
-
-message AnimalPart{
-  int32 id =1;
-  double weight = 2;
-  string type =3;
-  Animal cameFrom = 4;
-}
 
 message PackageId{
   int32 id=1;
 }
 
-message Package{
-  PackageId id=1;
-  string type =2;
-  repeated AnimalPart parts =3;
-}
-
 service GetAnimalsRegistrationNumbersPackage{
   rpc Get(PackageId) returns (RegistrationNumbersForAnimal);
-}
-
-message HalfAnAnimal{
-  HalfAnAnimalId id=1;
-  repeated AnimalPart parts =2;
 }
 
 message RegistrationNumbersForAnimal{

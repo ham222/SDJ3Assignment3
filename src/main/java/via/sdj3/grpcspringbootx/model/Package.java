@@ -10,6 +10,7 @@ public class Package {
     private final String type;
     private List<Tray> trays;
     private ArrayList<AnimalPart> parts;
+    private int id;
 
     public Package(String type) {
         this.type = type;
